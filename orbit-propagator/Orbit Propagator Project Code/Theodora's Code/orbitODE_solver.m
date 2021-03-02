@@ -71,3 +71,6 @@ function orbitODE_solver(a,e,i,O,w,t0,tf)
     end 
 end
 
+% Resources:
+% [1] Spacecraft Dynamics and Control (AER506) Course Notes
+% [2] H. D. Curtis, Orbital Mechanics for Engineering Students (Appendix D.6)
