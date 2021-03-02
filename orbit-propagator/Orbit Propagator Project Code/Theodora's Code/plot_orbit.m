@@ -63,6 +63,8 @@ function [r, v, s] = plot_orbit(a,e,i,O,w,t0,tf)
     plot(1:tf, s, "r", 'LineWidth', 2)
     title ("Satellite Speed (km/s)")
     xlabel("Time (s)")
-    ylabel("Speed (km/s)")
-    
+    ylabel("Speed (km/s)")   
 end
+
+% Resources:
+% [1] Spacecraft Dynamics and Control (AER506) Course Notes
