@@ -10,4 +10,4 @@
 
 4. orbitODE_solver.py - Python function file that returns position and velocity vectors for a satellite by integrating the ODE given by the two-body problem (Task 2)
 
-5. plot_orbit.py - Python function file that returns one plot for the satellite's position around the earth and another plot of the satellite's speed versus time using the position and velocity vectors from orbitODE_solver.py
+5. plot_orbit.py - Python function file that returns one plot for the satellite's position around the Earth and another plot of the satellite's speed versus time using the position and velocity vectors from orbitODE_solver.py
