@@ -34,7 +34,7 @@ def plot_orbit(position, velocity, t_list):
     earth.plot_surface(a, b, c, cmap='gist_earth_r', linewidth = 0.5)
 
     # Plot Position Data
-    earth.scatter(x,y,z, c = 'red')
+    earth.plot3D(x, y, z, c = 'red')
     earth.set_title('Satellite Position (km)')
     #zoom = 15000
     #earth.set(xlim=(-zoom, zoom), ylim=(-zoom, zoom), zlim=(-zoom, zoom))
