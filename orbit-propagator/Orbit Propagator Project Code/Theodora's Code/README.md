@@ -2,7 +2,7 @@
 
 ## Files:
 
-1. plot_orbit.m - MATLAB function file for plotting orbits using direct equations (Task 1)
+1. orbit_from_equations.m - MATLAB function file for plotting orbits using direct equations (Task 1)
 
 2. SHO_solver.m - MATLAB function file for plotting motion of a simple harmonic oscillator
 
