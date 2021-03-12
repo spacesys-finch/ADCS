@@ -4,7 +4,7 @@
 
 1. orbit_from_equations.m - MATLAB function file for plotting orbits using direct equations (Task 1)
 
-2. SHO_solver.m - MATLAB function file for plotting motion of a simple harmonic oscillator
+2. orbit_from_equations.py - Python function file that returns position and velocity vectors for a satellite using direct equations (Task 1)
 
 3. orbitODE_solver.m - MATLAB function file for plotting orbits by integrating the ODE given by the two-body problem (Task 2)
 
