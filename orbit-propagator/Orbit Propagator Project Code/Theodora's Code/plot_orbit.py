@@ -7,14 +7,15 @@ def plot_orbit(position, velocity, t_list):
     Plots satellite speed versus time.
     
         Parameters:
-            position (list):   Satellite position vectors in the form [[x], [y], [z]]
-            velocity (list):   Satellite velocity vectors in the form [[u], [v], [w]]
-            t_list (list):     Time vector associated with position and velocity vectors
+            position (array):   Satellite position vectors in the form [[x], [y], [z]]
+            velocity (array):   Satellite velocity vectors in the form [[u], [v], [w]]
+            t_list (list):      Time vector associated with position and velocity vectors
     
         Returns:
             Figure 1 (3D):   Satellite path around the Earth
             Figure 2 (2D):   Satellite speed versus time in km/s      
     '''
+    
     x, y, z = position[0], position[1], position[2]
     u, v, w = velocity[0], velocity[1], velocity[2]
 
