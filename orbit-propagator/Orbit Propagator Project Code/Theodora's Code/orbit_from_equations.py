@@ -23,8 +23,8 @@ def orbit_from_equations(a,e,i,O,w,t0,tf,ts):
             ts (float): Desired time step between points
     
         Returns:
-            position (array):   Satellite position vectors in the form [[x], [y], [z]]
-            velocity (array):   Satellite velocity vectors in the form [[u], [v], [w]]
+            position (array):   Satellite position vectors in the form [[x0, x1...], [y0, y1...], [z0, z1...]]
+            velocity (array):   Satellite velocity vectors in the form [[u0, u0...], [v0, v0...], [w0, w0...]]
             t_list (array):     Time vector associated with position and velocity vectors
             y0 (array):         Initial condition vector in the form [x0, y0, z0, u0, v0, w0]
     '''
