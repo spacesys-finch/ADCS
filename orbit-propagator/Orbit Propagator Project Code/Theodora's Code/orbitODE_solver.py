@@ -11,7 +11,7 @@ def orbitODE_solver(a,e,i,O,w,t0,tf,ts):
             a (float):  Semi-major axis
                         Largest radius measured from centre of ellipse
             e (float):  Eccentricity
-                        Indicates elliptical shape of orbit (0 <= e < 1, where e = 0 is a circle)
+                        Indicates elliptical shape of orbit 
             i (float):  Inclination
                         Angle between elliptical plane and reference plane
             O (float):  Right Ascension of the Ascending Node (RAAN) / Longitude of Ascending Node
@@ -24,9 +24,10 @@ def orbitODE_solver(a,e,i,O,w,t0,tf,ts):
             ts (float): Desired time step between points
     
         Returns:
-            position (list):   Satellite position vectors in the form [[x], [y], [z]]
-            velocity (list):   Satellite velocity vectors in the form [[u], [v], [w]]
-            t_list (list):     Time vector associated with position and velocity vectors
+            position (array):   Satellite position vectors in the form [[x], [y], [z]]
+            velocity (array):   Satellite velocity vectors in the form [[u], [v], [w]]
+            t_list (array):     Time vector associated with position and velocity vectors
+            y0 (array):         Initial condition vector in the form [x0, y0, z0, u0, v0, w0]
     '''
 
     # Define Constants
@@ -68,8 +69,8 @@ def orbitODE_solver(a,e,i,O,w,t0,tf,ts):
     v0 = np.matmul(C_gp, [[-np.sin(theta)],[np.cos(theta) + e], [0]]) * np.sqrt(mu/l)
 
     # Initial position and velocity vector
-    y0 = np.concatenate((r0, v0), axis=None)        
-    
+    y0 = np.concatenate((r0, v0), axis=None)       
+
     # Define ODE to be solved
     def ode(t,x):  
         r = np.sqrt(x[0]**2 + x[1]**2 + x[2]**2)
@@ -87,7 +88,7 @@ def orbitODE_solver(a,e,i,O,w,t0,tf,ts):
     position = np.concatenate(([data.y[0]],[data.y[1]],[data.y[2]]), axis=0)
     velocity = np.concatenate(([data.y[3]],[data.y[4]],[data.y[5]]), axis=0)
     
-    return position, velocity, t_list
+    return position, velocity, t_list, y0
 
 '''
 References:
